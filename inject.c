@@ -8,6 +8,7 @@
 #include <unistd.h>
 #include <sys/user.h>
 #include <sys/reg.h>
+//prety much done 
 //will need work my ide had broken
 #define QUOTE_MACRO_VALUE(MACRO) #MACRO
 #define print_definition(MACRO) printf("%-24s = %s\n", #MACRO, QUOTE_MACRO_VALUE(MACRO))
