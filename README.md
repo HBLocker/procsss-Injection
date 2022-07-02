@@ -14,13 +14,12 @@ based form the following:
 
 
 
+
+
 - Phillip Kemkes.  echniques: Current Use of Virtual Machine Detection Methods. Available: https://www.gdatasoftware.com/blog/2020/05/36068-current-use-of virtual-machine-detection-methods. Last accessed na.
 
 - Predifined Architectures https://sourceforge.net/p/predef/wiki/Architectures/ 
-
-- https://0x00sec.org/t/linux-infecting-running-processes/1097 
-
-
+- 
 
 Then the procsess will be added to to auto inject insted of manualy doing it insted of user input:
 
