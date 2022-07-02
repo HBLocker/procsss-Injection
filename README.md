@@ -6,8 +6,8 @@ Needs to detect AMD and intel at runtime if detected it will run otherwise ti wi
 
 I wanted to play around with the idea of how on some level malware works and how it. 
 - A How on a broad level does nmalware into procsesses?
--  B How it can detect hardwware types and not run if we think about for example Stuxnet.
--   
+- B How it can detect hardwware types and not run if we think about for example Stuxnet.
+
 ##### This is very basic example of how this works. As I really wanted to see the broader concepts behind this. 
 
 based form the following:
